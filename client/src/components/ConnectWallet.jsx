@@ -27,7 +27,7 @@ const ConnectWallet = () => {
   }, []);
 
   return (
-    <div className="w-[204px] h-[46px] px-5 py-6 rounded-[999px] border border-white justify-start items-center gap-2 inline-flex">
+    <div className="ConnectWalletButton w-[204px] px-5 py-6 rounded-[999px] border border-black justify-start items-center gap-2 flex">
       {!account ? (
         <div className="wallet-button" onClick={connectWallet}>
           <div className="justify-center items-center gap-2 flex">
@@ -38,7 +38,11 @@ const ConnectWallet = () => {
           </div>
         </div>
       ) : (
-        <p className="text-red">{account}</p>
+        <div className="connected-wallet">
+          <p className="text-black text-lg font-normal font-['Space Grotesk'] leading-[27px]">
+            {account}
+          </p>
+        </div>
       )}
     </div>
   );
