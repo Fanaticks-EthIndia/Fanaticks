@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../styles/ConnectWallet.css";
 
 const ConnectWallet = () => {
   const [account, setAccount] = useState("");
@@ -33,13 +32,13 @@ const ConnectWallet = () => {
         <div className="wallet-button" onClick={connectWallet}>
           <div className="justify-center items-center gap-2 flex">
             <div className="w-6 h-6 relative wallet-icon" />
-            <div className="text-white text-lg font-normal font-['Space Grotesk'] leading-[27px]">
+            <div className="text-black text-lg font-normal font-['Space Grotesk'] leading-[27px]">
               Connect Wallet
             </div>
           </div>
         </div>
       ) : (
-        <p className="text-white">{account}</p>
+        <p className="text-red">{account}</p>
       )}
     </div>
   );
