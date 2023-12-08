@@ -1,13 +1,9 @@
-
-
 const CreateEvent = () => {
   return (
     <div>
-        <h1>
-            Create event
-        </h1>
+      <h1>Create event</h1>
     </div>
-  )
-}
+  );
+};
 
-export default CreateEvent
+export default CreateEvent;

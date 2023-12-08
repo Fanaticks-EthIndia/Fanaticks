@@ -1,7 +1,7 @@
 // App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Discover from "./pages/Discover";
 import CreateEvent from "./pages/CreateEvent";
