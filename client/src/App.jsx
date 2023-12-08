@@ -7,24 +7,21 @@ import Discover from "./pages/Discover";
 import CreateEvent from "./pages/CreateEvent";
 import Footer from "./components/Footer";
 
-import "./App.css";
-
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Router>
-        <>
-          <NavBar />
+        <NavBar />
+        <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/discover" element={<Discover />} />
             <Route path="/create-event" element={<CreateEvent />} />
           </Routes>
-        </>
+        </div>
       </Router>
-
-      <Footer />
+      {/* <Footer /> add this */}
     </div>
   );
 };
