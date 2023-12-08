@@ -1,4 +1,5 @@
 import  { useEffect, useState } from 'react';
+import '../styles/ConnectWallet.css';
 
 const ConnectWallet = () => {
   const [account, setAccount] = useState('');
@@ -25,9 +26,15 @@ const ConnectWallet = () => {
   }, []);
 
   return (
-    <div>
-      <button onClick={connectWallet}>Connect Wallet</button>
-      {account && <p>Connected: {account}</p>}
+    <div className="ConnectWalletButton">
+      {!account ? (
+        <div className="wallet-button" onClick={connectWallet}>
+          <div className="wallet-icon"></div>
+          <div className="wallet-text">Connect Wallet</div>
+        </div>
+      ) : (
+        <p>{account}</p>
+      )}
     </div>
   );
 };

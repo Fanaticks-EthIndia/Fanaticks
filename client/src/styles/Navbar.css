@@ -20,3 +20,11 @@ nav {
     color: white;
     text-decoration: none;
   }
+  .Navbar {
+    width: 1175px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 240px;
+  }

@@ -1,11 +1,11 @@
-// pages/Home.jsx
+import React from 'react'
 
-const Home = () => {
+const home = () => {
   return (
     <div>
-      <h1>Homeeeeeeeeee</h1>
+      
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default home
