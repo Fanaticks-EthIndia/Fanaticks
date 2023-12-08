@@ -2,20 +2,6 @@ const Home = () => {
   return (
     <div>
       <div className="hero-section flex items-center justify-center h-screen relative">
-        {/* Top Right Image */}
-        <img
-          src="top-right-image.jpg" // Replace with the actual path to your image
-          alt="Top Right Image"
-          className="absolute top-0 right-0 w-24 h-24 mr-8 mt-8"
-        />
-
-        {/* Bottom Left Image */}
-        <img
-          src="bottom-left-image.jpg" // Replace with the actual path to your image
-          alt="Bottom Left Image"
-          className="absolute bottom-0 left-0 w-24 h-24 ml-8 mb-8"
-        />
-
         <div className="hero-section content text-center">
           <div className="hero-section-title text-4xl font-bold mb-4">
             Elevate Events
@@ -36,6 +22,20 @@ const Home = () => {
             </button>
           </div>
         </div>
+
+        {/* Top Right Image */}
+        <img
+          src="top-right-image.jpg" // Replace with the actual path to your image
+          alt="Top Right Image"
+          className="absolute top-0 right-0 w-24 h-24 mr-4 mt-4"
+        />
+
+        {/* Bottom Left Image */}
+        <img
+          src="bottom-left-image.jpg" // Replace with the actual path to your image
+          alt="Bottom Left Image"
+          className="absolute bottom-0 left-0 w-24 h-24 ml-4 mb-4"
+        />
       </div>
     </div>
   );

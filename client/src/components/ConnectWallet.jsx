@@ -27,22 +27,17 @@ const ConnectWallet = () => {
   }, []);
 
   return (
-    <div className="ConnectWalletButton w-[204px] px-5 py-6 rounded-[999px] border border-black justify-start items-center gap-2 flex">
+    <div>
       {!account ? (
-        <div className="wallet-button" onClick={connectWallet}>
-          <div className="justify-center items-center gap-2 flex">
-            <div className="w-6 h-6 relative wallet-icon" />
-            <div className="text-black text-lg font-normal font-['Space Grotesk'] leading-[27px]">
-              Connect Wallet
-            </div>
-          </div>
-        </div>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          onClick={connectWallet}>
+          Connect Wallet
+        </button>
       ) : (
-        <div className="connected-wallet">
-          <p className="text-black text-lg font-normal font-['Space Grotesk'] leading-[27px]">
-            {account}
-          </p>
-        </div>
+        <button className="btn btn-primarybg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          <p>{account}</p>
+        </button>
       )}
     </div>
   );

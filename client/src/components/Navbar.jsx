@@ -34,7 +34,7 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <div className="ConnectWalletButton w-[204px] px-5 py-6 rounded-[999px] border border-black flex items-center space-x-2">
+        <div>
           <ConnectWallet />
         </div>
       </div>
