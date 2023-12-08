@@ -1,29 +1,25 @@
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import "./App.css";
+// App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/Navbar';
+import Home from './pages/home';
+import About from './pages/About';
+import Discover from './pages/Discover';
+import CreateEvent from './pages/CreateEvent';
 
-function App() {
+import './App.css';
+
+const App = () => {
   return (
     <Router>
-      <div>
-        <li>
-          <NavLink to="/">Dogs</NavLink>
-        </li>
-        <li>
-          <NavLink to="/cats">Cats</NavLink>
-        </li>
-        <li>
-          <NavLink to="/sheeps">Sheeps</NavLink>
-        </li>
-        <li>
-          <NavLink to="/goats">Goats</NavLink>
-        </li>
-      </div>
-      <Routes>
-        <Route path="/" element={<div>Dogs Page</div>} />
-        <Route path="/cats" element={<div>Cats Page</div>} />
-        <Route path="/sheeps" element={<div>Sheeps Page</div>} />
-        <Route path="/goats" element={<div>Goats Page</div>} />
-      </Routes>
+      <>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/create-event" element={<CreateEvent />} />
+        </Routes>
+      </>
     </Router>
   );
 }
