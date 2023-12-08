@@ -1,10 +1,11 @@
+import EventCardHolder from '../components/EventCardHolder'
 
 const Discover = () => {
   return (
-    <div>
-      <h1>Discover</h1>
-    </div>
+    <>
+      <EventCardHolder />
+    </>
   )
 }
 
-export default Discover
+export default Discover;
