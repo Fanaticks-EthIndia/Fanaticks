@@ -19,6 +19,7 @@ const App = () => {
           <Route path="/discover" element={<Discover />} />
           <Route path="/create-event" element={<CreateEvent />} />
         </Routes>
+        
       </>
     </Router>
   );
