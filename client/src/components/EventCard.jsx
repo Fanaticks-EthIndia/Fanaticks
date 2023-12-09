@@ -1,3 +1,5 @@
+import CustomModal from "./Modal";
+
 const EventCard = ({ cardData, setCardData }) => {
   return (
     <>
@@ -10,9 +12,7 @@ const EventCard = ({ cardData, setCardData }) => {
           <p className="card-text">{cardData.location}</p>
           <p className="card-text">{cardData.price}</p>
           <img src={cardData.image} alt="Event Image" />
-          <a href={cardData.link} className="btn btn-primary">
-            Go somewhere
-          </a>
+            <CustomModal />
         </div>
       </div>
     </>
