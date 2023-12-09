@@ -15,6 +15,38 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
     setIsModalOpen(false);
   };
 
+  const postEvent = async () => {
+    const newEvent = {
+      title: "Event 5",
+      description: "Description for Event 5",
+      date: "2023-12-30",
+      time: "22:00",
+      location: "Venue 5",
+      price: "$30.00",
+      image: "https://example.com/event5.jpg",
+
+    };
+
+    try {
+      const response = await fetch('http://localhost:8000', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newEvent),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const responseData = await response.json();
+      console.log('successful post hogaya', responseData);
+
+    } catch (error) {
+      console.error('Post fail hogaya', error.message);
+    }
+  }
   return (
     <>
       <div className="profile-events ">
@@ -62,7 +94,7 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                     <h1 className="text-white font-primary">Enter Time <span className="text-red-500">*</span></h1>
                     <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
-                  
+
                   <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter Price <span className="text-red-500">*</span></h1>
                     <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
@@ -73,8 +105,7 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                   </div>
                 </div>
               </div>
-              {/* update profile Data state*/}
-              {/* <button src="x.com">Submit</button> */}
+              <button onClick={postEvent}>Submit</button>
             </form>
           </CustomModal>
           {/* <EventCardHolder cardData={cardData} setCardData={setCardData} /> */}

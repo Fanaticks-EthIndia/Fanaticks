@@ -49,8 +49,6 @@ const Profile = () => {
             location: "Venue 4",
             price: "$25.00",
             image: "https://example.com/event4.jpg",
-            link: "https://example.com/event4",
-            tags: ["Tag7", "Tag8"],
         }]
     });
   return (
