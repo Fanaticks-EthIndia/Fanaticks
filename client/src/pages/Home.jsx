@@ -51,7 +51,7 @@ const Home = () => {
       <Sponsor />
 
       <div id="about" className="mb-36">
-        <div className="flex justify-center items-center gap-[251px] mx-10">
+        <div className="flex justify-center items-center gap-[251px] mx-32">
           <div className="flex flex-col justify-center items-start gap-5">
             <div className="text-secondary text-4xl font-semibold font-secondary leading-[45px]">
               About Us
