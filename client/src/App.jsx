@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen mx-10">
+    <div className="flex flex-col ">
       <Router>
         <NavBar />
         <div className="flex-grow">
@@ -19,7 +19,7 @@ const App = () => {
           </Routes>
         </div>
       </Router>
-      {/* <Footer /> add this */}
+      <Footer />
     </div>
   );
 };

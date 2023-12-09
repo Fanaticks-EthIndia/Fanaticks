@@ -1,7 +1,7 @@
 import EventCardHolder from '../components/EventCardHolder'
 
 const Discover = () => {
-    const [cardData, setCardData] = useState([
+  const [cardData, setCardData] = useState([
     {
       title: "Event 1",
       description: "Description for Event 1",
@@ -48,9 +48,9 @@ const Discover = () => {
     },
   ]);
   return (
-    <>
-      <EventCardHolder cardData={cardData} setCardData={setCardData}/>
-    </>
+    <div>
+      <EventCardHolder cardData={cardData} setCardData={setCardData} /> 
+    </div>
   )
 }
 
