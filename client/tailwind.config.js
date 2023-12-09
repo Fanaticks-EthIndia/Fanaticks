@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ['Space Grotesk', 'sans-serif'],
+        secondary: ['Quanta Grotesk Pro', 'sans-serif']
+      },  
+      colors: {
+        background: '#18181A',
+        primary: '#542D72',
+        secondary: '#A566A6',
+        drakGray: '#333333',
+        lightGray: '#71706C'
+      }
+    },
+
   },
   plugins: [],
 }
