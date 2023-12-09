@@ -6,7 +6,7 @@ const CreateEvent = () => {
     <div className="flex flex-col min-h-screen ">
       <div className="bg-lightGray bg-opacity-10 relative h-96 rounded-t-xl w-full">
       </div>
-      <div className="flex flex-col py-20 mx-10">
+      <div className="flex flex-col py-20 mx-32">
         {/* Profile Picture */}
         <img src={pfp} className="h-fit  absolute top-72 border-6 border-BaseWhite w-40" alt="Your default profile picture" />
         {/* User Address */}
