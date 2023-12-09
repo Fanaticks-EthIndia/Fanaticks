@@ -6,3 +6,6 @@
     font-family: Quanta Grotesk Pro;
     src: url(/src/assets/QuantaGroteskPro-Regular.ttf) format('truetype');
 }
+body{
+    background: #18181A;
+}
