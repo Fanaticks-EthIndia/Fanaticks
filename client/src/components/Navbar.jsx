@@ -4,14 +4,13 @@ import logo from "../assets/images/logo.svg";
 
 const NavBar = () => {
   return (
-    <div className="Navbar w-full fixed top-2 z-50">
-      <div className="w-[1175px] mx-auto h-[46px] flex justify-between items-center">
+    <div className="Navbar w-full fixed z-10 bg-opacity-75 p-8 bg-background">
+      <div className="mx-10 flex justify-between items-center">
         <div className="FanaticksLogo h-[34px] flex justify-center items-center gap-2">
           <img src={logo} className="h-8 w-fit" />
           <Link
             to="/"
-            className="Fanaticks black  text-[32px] font-normal font-secondary text-primary" >
-
+            className="Fanaticks black  text-[32px] font-normal font-secondary text-secondary" >
             Fanaticks
           </Link>
         </div>
