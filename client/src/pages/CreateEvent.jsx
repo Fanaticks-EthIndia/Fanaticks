@@ -1,13 +1,12 @@
-
+import Profile from "../components/Profile";
 
 const CreateEvent = () => {
-  return (
-    <div>
-        <h1>
-            Create event
-        </h1>
-    </div>
-  )
-}
-
-export default CreateEvent
+    return (
+      <div>
+        <Profile />
+      </div>
+    )
+  }
+  
+  export default CreateEvent;
+  
