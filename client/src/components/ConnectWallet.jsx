@@ -26,6 +26,10 @@ const ConnectWallet = () => {
     }
   }, []);
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(account);
+  };
+
   return (
     <div>
       {!account ? (
@@ -35,7 +39,9 @@ const ConnectWallet = () => {
           Connect Wallet
         </button>
       ) : (
-        <button className="btn btn-primarybg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button
+          className="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          onClick={copyToClipboard}>
           <p>{account}</p>
         </button>
       )}
