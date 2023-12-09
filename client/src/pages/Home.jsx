@@ -3,7 +3,7 @@ const Home = () => {
     <div>
       <div className="hero-section flex items-center justify-center h-screen relative">
         <div className="hero-section content text-center">
-          <div className="hero-section-title text-4xl font-bold mb-4">
+          <div className="hero-section-title text-4xl font-bold mb-4 font-secondary">
             Elevate Events
           </div>
           <div className="hero-section-title text-4xl font-bold mb-4">

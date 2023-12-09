@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Quanta Grotesk Pro;
+    src: url(/src/assets/QuantaGroteskPro-Regular.ttf) format('truetype');
+}
