@@ -1,6 +1,7 @@
 import spiral from "../assets/images/spiral.svg";
 import spiral2 from "../assets/images/spiral-2.svg";
 import about from "../assets/images/about.png";
+import Sponsor from "../components/Sponsor";
 
 const Home = () => {
   return (
@@ -8,8 +9,8 @@ const Home = () => {
       <div className="hero-section flex items-center justify-center h-screen relative">
         <div className="hero-section justify-center text-center">
           <div className="hero-section-title justify-center text-4xl font-bold mb-4 font-secondary text-secondary">
-            Elevate Events <br />
-            Own Experiences
+            Elevate Events, <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-blue-500 to-orange-600">Own Experiences</span>
           </div>
           <div className="hero-section-subtitle text-lg mb-8 font-primary text-white text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -30,21 +31,25 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* Image Section */}
+        <div>
+          {/* Top Right Image */}
+          <img
+            src={spiral} // Replace with the actual path to your image
+            alt="Top Right Image"
+            className="absolute top-0 right-0 mr-4 mt-4"
+          />
 
-        {/* Top Right Image */}
-        <img
-          src={spiral} // Replace with the actual path to your image
-          alt="Top Right Image"
-          className="absolute top-0 right-0 mr-4 mt-4"
-        />
-
-        {/* Bottom Left Image */}
-        <img
-          src={spiral2} // Replace with the actual path to your image
-          alt="Bottom Left Image"
-          className="absolute bottom-0 left-0  ml-4 -mb-56"
-        />
+          {/* Bottom Left Image */}
+          <img
+            src={spiral2} // Replace with the actual path to your image
+            alt="Bottom Left Image"
+            className="absolute bottom-0 left-0  ml-4 -mb-56"
+          />
+        </div>
       </div>
+      <Sponsor />
+
       <div id="about" className="mb-36">
         <div className="flex justify-center items-center gap-[251px] mx-10">
           <div className="flex flex-col justify-center items-start gap-5">
