@@ -2,9 +2,9 @@ const ProfileBar = (profileData) => {
   return (
     <>
       <div className="profile-bar">
-        <div className="profile-bar-image">
+        {/* <div className="profile-bar-image">
           <img src={profileData.img} alt="Profile Image" />
-        </div>
+        </div> */}
         <div className="profile-bar-name">
           {<h1>{profileData.name}</h1>}
         </div>
