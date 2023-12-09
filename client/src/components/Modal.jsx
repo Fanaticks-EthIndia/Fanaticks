@@ -12,11 +12,18 @@ const CustomModal = ({ isOpen, onClose, children }) => {
         overlay: {
           backgroundColor: '#18181A',
           position: 'fixed',
-          top: 60,
+          top:90,
+          left: 250,
+          width: '986px',
+          height: '630px'
 
         },
         content: {
           position: 'absolute',
+          top: '0px',
+          left: '0px',
+          right: '0px',
+          bottom: '0px',
           border: 'none',
           background: '#333',
           overflow: 'auto',

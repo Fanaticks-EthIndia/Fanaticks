@@ -26,10 +26,10 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
             <div className="text-white text-sm font-primary font-normal" >Create a new Event</div>
           </div>
           <CustomModal isOpen={isModalOpen} onClose={closeModal}>
-            <h1 className="text-white font-secondary text-xl ">Upload Event Details</h1>
+            <h1 className="text-white font-secondary text-xl mb-1">Upload Event Details</h1>
             <form className="flex flex-row justify-between gap-4">
-              <div className="flex flex-col gap-4 w-1/2">
-                <img src={Invited} className="h-[392px] border border-lightGray rounded-lg" alt="Event Image" />
+              <div className="flex flex-col gap-4 ">
+                <img src={Invited} className="h-[392px] rounded-lg" alt="Event Image" />
 
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between ">
@@ -46,30 +46,30 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
               </div>
               <div className="flex flex-col w-1/2">
                 <div className="flex flex-col gap-2">
-                  <div className="flex justify-between">
+                  <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter event name <span className="text-red-500">*</span></h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter event description <span className="text-red-500">*</span></h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter Date <span className="text-red-500">*</span></h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter Time <span className="text-red-500">*</span></h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
                   
-                  <div className="flex justify-between">
+                  <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter Price <span className="text-red-500">*</span></h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex flex-col justify-between">
                     <h1 className="text-white font-primary">Enter Tags <span className="text-red-500">*</span></h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" class="bg-transparent border-lightGray border rounded-md p-2 text-white" />
                   </div>
                 </div>
               </div>

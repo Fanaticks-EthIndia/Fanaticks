@@ -3,6 +3,7 @@ import spiral2 from "../assets/images/spiral-2.svg";
 import about from "../assets/images/about.png";
 import Sponsor from "../components/Sponsor";
 
+
 const Home = () => {
   return (
     <div>
