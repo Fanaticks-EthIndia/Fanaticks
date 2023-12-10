@@ -25,7 +25,7 @@ const Home = () => {
               <button className="hero-button discover flex gap-2 bg-none font-primary border text-white font-medium  py-2 px-4 rounded-full">
                 Discover Events
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                  <path d="M15.1696 6.5C17.273 8.05556 19.1622 9.87278 20.7905 11.9057C20.9302 12.0801 21 12.29 21 12.5M15.1696 18.5C17.273 16.9444 19.1622 15.1272 20.7905 13.0943C20.9302 12.9199 21 12.71 21 12.5M21 12.5H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15.1696 6.5C17.273 8.05556 19.1622 9.87278 20.7905 11.9057C20.9302 12.0801 21 12.29 21 12.5M15.1696 18.5C17.273 16.9444 19.1622 15.1272 20.7905 13.0943C20.9302 12.9199 21 12.71 21 12.5M21 12.5H3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
 
