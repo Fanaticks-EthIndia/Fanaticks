@@ -5,7 +5,7 @@
 // import { PushAPI } from '@pushprotocol/restapi';
 
 
-// const Everydayscreen = () => {
+const Everydayscreen = () => {
 //     const [account, setAccount] = useState('');
 //     const [artist, setArtist] = useState('');
 //     let provider;
@@ -88,11 +88,11 @@
 //             }
 //           });
 //     }
-//     return (
-//         <>
-//             <ConnectWallet />
-//             <button style={{marginTop:"50px"}}onClick={createCommunity}>Create Community</button>
-//         </>
-//     )
-// }
-// export default Everydayscreen;
+    return (
+        <>
+            <ConnectWallet />
+            <button style={{marginTop:"50px"}}onClick={createCommunity}>Create Community</button>
+        </>
+    )
+}
+export default Everydayscreen;

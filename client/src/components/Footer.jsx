@@ -7,6 +7,7 @@ import Discord from "../assets/images/icons/faDiscord.svg"
 import Youtube from "../assets/images/icons/faYoutube.svg"
 
 const Footer = () => {
+  let ind =0;
   const Socials = [
     {
       logo: X,
@@ -49,7 +50,7 @@ const Footer = () => {
               <h1 className="text-md font-primary font-medium text-white">Follow us</h1>
               <div className="flex gap-2 ">
                 {Socials.map((social) => (
-                  <div className=" items-center p-2 w-10 h-10 bg-white bg-opacity-10 rounded-md cursor-pointer hover:bg-primary duration-100 ease-outf"><img src={social.logo} className="h-6 w-fit" /></div>
+                  <div key={ind++} className=" items-center p-2 w-10 h-10 bg-white bg-opacity-10 rounded-md cursor-pointer hover:bg-primary duration-100 ease-outf"><img src={social.logo} className="h-6 w-fit" /></div>
                 ))}
               </div>
             </div>

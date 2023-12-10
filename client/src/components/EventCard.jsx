@@ -13,8 +13,8 @@ const EventCard = ({ cardData, setCardData }) => {
             <div className="flex flex-col gap-2">
               {/* Card Location */}
               <div className="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M11.7895 13.7105C13.4027 13.7105 14.7105 12.4027 14.7105 10.7895C14.7105 9.17622 13.4027 7.86842 11.7895 7.86842C10.1762 7.86842 8.86842 9.17622 8.86842 10.7895C8.86842 12.4027 10.1762 13.7105 11.7895 13.7105Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M11.7895 21.5C13.7368 21.5 19.5789 17.3889 19.5789 11.2222C19.5789 5.05556 14.7105 3 11.7895 3C8.86842 3 4 5.05556 4 11.2222C4 17.3889 9.84211 21.5 11.7895 21.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.7895 13.7105C13.4027 13.7105 14.7105 12.4027 14.7105 10.7895C14.7105 9.17622 13.4027 7.86842 11.7895 7.86842C10.1762 7.86842 8.86842 9.17622 8.86842 10.7895C8.86842 12.4027 10.1762 13.7105 11.7895 13.7105Z" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
+                <path d="M11.7895 21.5C13.7368 21.5 19.5789 17.3889 19.5789 11.2222C19.5789 5.05556 14.7105 3 11.7895 3C8.86842 3 4 5.05556 4 11.2222C4 17.3889 9.84211 21.5 11.7895 21.5Z" stroke="white" strokeWidth="2" strokeLinejoin="round" />
               </svg><p className="font-primary font-normal text-white text-base">{cardData.location}</p></div>
               {/* Card Date */}
               <div className="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -24,10 +24,10 @@ const EventCard = ({ cardData, setCardData }) => {
           </div>
           <div className="flex gap-2">
             <button className="bg-white rounded-lg text-black font-primary flex items-center gap-2 px-2 p-1">Join the Community<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M9 14.25V9M9 9V3.75M9 9L3.75 9M9 9L14.25 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 14.25V9M9 9V3.75M9 9L3.75 9M9 9L14.25 9" stroke="black" strokeWidth="2" strokeLinejoin="round" />
             </svg></button>
             <button className="bg-white bg-opacity-10 rounded-lg text-white font-primary flex items-center gap-2 px-2 p-1">More Info<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M12.6413 5C14.3942 6.2963 15.9685 7.81065 17.3254 9.50473C17.4418 9.65006 17.5 9.82503 17.5 10M12.6413 15C14.3942 13.7037 15.9685 12.1893 17.3254 10.4953C17.4418 10.3499 17.5 10.175 17.5 10M17.5 10H2.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12.6413 5C14.3942 6.2963 15.9685 7.81065 17.3254 9.50473C17.4418 9.65006 17.5 9.82503 17.5 10M12.6413 15C14.3942 13.7037 15.9685 12.1893 17.3254 10.4953C17.4418 10.3499 17.5 10.175 17.5 10M17.5 10H2.5" stroke="white" strokeWidth="2" strokeLinejoin="round" />
             </svg></button>
           </div>
         </div>
