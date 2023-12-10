@@ -34,10 +34,13 @@ Follow these steps to set up Fanaticks on your local machine:
    npm start
    ```
 
+## Architecture
+
+![ARCHITECHTURE](https://github.com/Fanaticks-EthIndia/Fanaticks/assets/108970936/db276e4e-c757-45ff-8e80-0fbac1623083)
+
 ## Contributing
 
 We welcome contributions! To contribute to Fanaticks, follow our [contribution guidelines](CONTRIBUTING.md).
-
 
 
 Happy event management with Fanaticks!
