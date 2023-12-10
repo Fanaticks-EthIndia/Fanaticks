@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import CreateEvent from "./pages/CreateEvent";
 import Footer from "./components/Footer";
-import Everydayscreen from "./components/push";
+// import Everydayscreen from "./components/push";
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/discover" element={<Discover />} />
             <Route path="/create-event" element={<CreateEvent />} />
-            <Route path="/push" element={<Everydayscreen/>} />
+            {/* <Route path="/push" element={<Everydayscreen/>} /> */}
           </Routes>
         </div>
       </Router>

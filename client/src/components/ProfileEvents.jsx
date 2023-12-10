@@ -60,7 +60,7 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                     </h1>
                     <input type="file" />
                   </div>
-                  <button onClick={} className="flex justify-center gap-2 text-white bg-none border border-white p-2 rounded-xl font-primary">
+                  <button className="flex justify-center gap-2 text-white bg-none border border-white p-2 rounded-xl font-primary">
                     Link Your Anon Aadhar{" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
