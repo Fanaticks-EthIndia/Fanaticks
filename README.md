@@ -12,8 +12,7 @@ Welcome to Fanaticks, a cutting-edge Proof Of Interest based  NFT ticketing plat
 
 ## Technical Details
 
-- **Smart Contracts:** Written in Solidity, the backbone of the platform's secure and decentralized functionality.
-- **Push Notifications:** Leveraging push notifications for real-time engagement alerts and content updates.
+- Smart Contracts: Written in Solidity, the backbone of the platform's secure and decentralized functionality.
 - **Polygon zkEVM:** Enhancing scalability and reducing transaction costs for efficient KYC processes.
 
 ## Getting Started
@@ -39,13 +38,7 @@ Follow these steps to set up Fanaticks on your local machine:
 
 We welcome contributions! To contribute to Fanaticks, follow our [contribution guidelines](CONTRIBUTING.md).
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-For inquiries, reach out to our team at contact@fanaticks.com.
 
 Happy event management with Fanaticks!
 ```
