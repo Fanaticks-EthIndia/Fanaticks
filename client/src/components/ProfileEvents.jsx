@@ -1,19 +1,37 @@
 import CustomModal from "./Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EventCardHolder from "./EventCardHolder";
 import Invited from "../assets/images/Invited.png";
 import AadhaarProof from "./AadhaarProof";
+import {
+  LogInWithAnonAadhaar,
+  useAnonAadhaar,
+  AnonAadhaarProof,
+} from "anon-aadhaar-react";
 
 const ProfileEvents = ({ profileData, setProfileData }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [anonAadhaar] = useAnonAadhaar();
+  const [showProof, setShowProof] = useState(false);
 
   const [cardData, setCardData] = useState(profileData.events);
-  const openModal = () => {
+
+  const openModal = (e) => {
+    e.preventDefault(); // Add this line to prevent page reload
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    console.log("Anon Aadhaar status: ", anonAadhaar.status);
+  }, [anonAadhaar]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShowProof(true);
   };
 
   return (
@@ -45,7 +63,11 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
             <h1 className="text-white font-secondary text-xl ">
               Upload Event Details
             </h1>
-            <form className="flex flex-row justify-between gap-4">
+            <form
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+              className="flex flex-row justify-between gap-4">
               <div className="flex flex-col gap-4 w-1/2">
                 <img
                   src={Invited}
@@ -60,7 +82,9 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                     </h1>
                     <input type="file" />
                   </div>
-                  <button className="flex justify-center gap-2 text-white bg-none border border-white p-2 rounded-xl font-primary">
+                  <button
+                    onClick={handleClick}
+                    className="flex justify-center gap-2 text-white bg-none border border-white p-2 rounded-xl font-primary">
                     Link Your Anon Aadhar{" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -77,6 +101,23 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                       />
                     </svg>
                   </button>
+                  {showProof && (
+                    <div>
+                      <LogInWithAnonAadhaar />
+                      <p>{anonAadhaar?.status}</p>
+                      <div>
+                        {/* Render the proof if generated and valid */}
+                        {anonAadhaar?.status === "logged-in" && (
+                          <>
+                            <p>✅ Proof is valid</p>
+                            <AnonAadhaarProof
+                              code={JSON.stringify(anonAadhaar.pcd, null, 2)}
+                            />
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  )}
                   <button className="flex justify-center gap-2 text-black bg-white border border-none p-2 rounded-xl font-primary">
                     Create the Event{" "}
                     <svg
@@ -86,7 +127,7 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                       viewBox="0 0 24 24"
                       fill="none">
                       <path
-                        d="M12 15V12M12 12V9M12 12H9M12 12H15M12 21C9.20435 21 7.80653 21 6.7039 20.5433C5.23373 19.9343 4.06569 18.7663 3.45672 17.2961C3 16.1935 3 14.7956 3 12C3 9.20435 3 7.80653 3.45672 6.7039C4.06569 5.23373 5.23373 4.06569 6.7039 3.45672C7.80653 3 9.20435 3 12 3C14.7956 3 16.1935 3 17.2961 3.45672C18.7663 4.06569 19.9343 5.23373 20.5433 6.7039C21 7.80653 21 9.20435 21 12C21 14.7956 21 16.1935 20.5433 17.2961C19.9343 18.7663 18.7663 19.9343 17.2961 20.5433C16.1935 21 14.7956 21 12 21Z"
+                        d="M12 15V12M12 12V9M12 12H9M12 12H15M12 21C9.20435 21 7.80653 21 6.7039 20.5433C5.23373 19.9343 4.06569 18.7663 3.45672 17.2961C3 16.1935 3 14.7956 3 12C3 9.20435 3 7.80653 3.45672 6.7039C4.06569 5.23373 5.23373 4.06569 6.7039 3.45672C7.80653 3 9.20435 3 12 3C14.7956 3 16.1935 3 17.2961 3.45672C18.7663 4.06569 19.9343 5.23373 20.5433 6.7039C21 7.80653 21 9.20435 21 12C21 14.7956 21 16.1935 20.5433 17.2961C19.9343 18.7663 18.7663 19.9343 17.2961 20.5433                         18.7663 19.9343 17.2961 20.5433C16.1935 21 14.7956 21 12 21Z"
                         stroke="black"
                         stroke-width="2"
                         stroke-linecap="round"
@@ -102,39 +143,39 @@ const ProfileEvents = ({ profileData, setProfileData }) => {
                     <h1 className="text-white font-primary">
                       Enter event name <span className="text-red-500">*</span>
                     </h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" className="bg-lightGray rounded-sm" />
                   </div>
                   <div className="flex justify-between">
                     <h1 className="text-white font-primary">
                       Enter event description{" "}
                       <span className="text-red-500">*</span>
                     </h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" className="bg-lightGray rounded-sm" />
                   </div>
                   <div className="flex justify-between">
                     <h1 className="text-white font-primary">
                       Enter Date <span className="text-red-500">*</span>
                     </h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" className="bg-lightGray rounded-sm" />
                   </div>
                   <div className="flex justify-between">
                     <h1 className="text-white font-primary">
                       Enter Time <span className="text-red-500">*</span>
                     </h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" className="bg-lightGray rounded-sm" />
                   </div>
 
                   <div className="flex justify-between">
                     <h1 className="text-white font-primary">
                       Enter Price <span className="text-red-500">*</span>
                     </h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" className="bg-lightGray rounded-sm" />
                   </div>
                   <div className="flex justify-between">
                     <h1 className="text-white font-primary">
                       Enter Tags <span className="text-red-500">*</span>
                     </h1>
-                    <input type="text" class="bg-lightGray rounded-sm" />
+                    <input type="text" className="bg-lightGray rounded-sm" />
                   </div>
                 </div>
               </div>
